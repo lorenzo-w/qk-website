@@ -19,7 +19,7 @@ export default function MyApp(props: AppProps): ReactElement {
   return (
     <React.Fragment>
       <Head>
-        <title>🏳️‍🌈 Queerbeet HSG</title>
+        <title>🏳️‍🌈 queerKAstle</title>
         <meta
           name="viewport"
           content="minimum-scale=1, initial-scale=1, width=device-width"

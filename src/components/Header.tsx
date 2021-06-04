@@ -13,9 +13,12 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Box from "@material-ui/core/Box";
 import Hidden from "@material-ui/core/Hidden";
 import Link from "@/components/Link";
+import Button from "@material-ui/core/Button"
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { useTheme } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  navbar: {
+  navbarSpaced: {
     paddingBottom: theme.spacing(3),
     paddingTop: theme.spacing(3),
   },
@@ -55,6 +58,9 @@ export default function Header(): ReactElement {
   const classes = useStyles();
   const [drawerOpen, setState] = React.useState(false);
 
+  const theme = useTheme();
+  const mdUp = useMediaQuery(theme.breakpoints.up("md"));
+
   const toggleDrawer = () => {
     setState(!drawerOpen);
   };
@@ -65,9 +71,9 @@ export default function Header(): ReactElement {
         position="static"
         color="transparent"
         elevation={0}
-        classes={{ root: classes.navbar }}
+        classes={mdUp ? { root: classes.navbarSpaced } : {}}
       >
-        <Container maxWidth="md">
+        <Container maxWidth="md" disableGutters>
           <Toolbar>
             <Hidden mdUp>
               <IconButton
@@ -81,10 +87,10 @@ export default function Header(): ReactElement {
               </IconButton>
             </Hidden>
             <Hidden smDown>
-              <Typography variant="h6" className={classes.title}>
+              <Typography variant="h5" className={classes.title}>
                 <Box display="flex">
                   {navLinks.map(({ text, href }) => (
-                    <Box key={href} mx={4}>
+                    <Box key={href} mr={8}>
                       <Link href={href} color="textPrimary">
                         {text}
                       </Link>
@@ -92,6 +98,16 @@ export default function Header(): ReactElement {
                   ))}
                 </Box>
               </Typography>
+              <Button
+                variant="contained"
+                color="secondary"
+                href="https://tr4pxy20yh0.typeform.com/to/DcPDUmxv"
+                target="_blank"
+                rel="noopener noreferrer"
+                size="large"
+              >
+                Zur Umfrage
+              </Button>
             </Hidden>
           </Toolbar>
         </Container>
@@ -101,10 +117,9 @@ export default function Header(): ReactElement {
           anchor="left"
           open={drawerOpen}
           onClose={toggleDrawer}
-          color="primary"
           classes={{ paper: classes.drawerPaper }}
         >
-          <Typography color="textPrimary">
+          <Typography color="textSecondary">
             <List component="nav" className={classes.navList}>
               {navLinks.map(({ text, href }) => (
                 <ListItem button key={href}>

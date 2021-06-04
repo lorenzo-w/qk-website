@@ -15,14 +15,14 @@ const footerLinks = [
 
 export default function Footer(): ReactElement {
   return (
-    <AppBar position="static" color="primary" elevation={0}>
+    <AppBar position="static" color="primary" elevation={0} component="footer">
       <Toolbar>
         <Container maxWidth="md">
           <Typography variant="body1">
             <Box display="flex">
               {footerLinks.map(({ text, href }) => (
-                <Box key={href} mx={4}>
-                  <Link href={href} color="textPrimary">
+                <Box key={href} mr={4}>
+                  <Link href={href} color="textSecondary">
                     {text}
                   </Link>
                 </Box>
