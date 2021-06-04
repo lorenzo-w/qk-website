@@ -1,0 +1,125 @@
+import React, { ReactElement } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Container from "@material-ui/core/Container";
+import Toolbar from "@material-ui/core/Toolbar";
+import AppBar from "@material-ui/core/AppBar";
+import IconButton from "@material-ui/core/IconButton";
+import MenuIcon from "@material-ui/icons/Menu";
+import Drawer from "@material-ui/core/Drawer";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import Box from "@material-ui/core/Box";
+import Hidden from "@material-ui/core/Hidden";
+import Link from "@/components/Link";
+
+const useStyles = makeStyles((theme) => ({
+  navbar: {
+    paddingBottom: theme.spacing(3),
+    paddingTop: theme.spacing(3),
+  },
+  menuButton: {
+    marginRight: theme.spacing(2),
+  },
+  title: {
+    flexGrow: 1,
+  },
+  navList: {
+    width: "70vw",
+  },
+  drawerPaper: {
+    background: theme.palette.primary.main,
+  },
+  navListItemText: {
+    fontSize: theme.typography.h6.fontSize,
+  },
+}));
+
+const navLinks = [
+  {
+    text: "Home",
+    href: "/",
+  },
+  {
+    text: "Kontakt",
+    href: "/contact",
+  },
+];
+
+function ListItemLink(props: any) {
+  return <ListItem button component="a" {...props} />;
+}
+
+export default function Header(): ReactElement {
+  const classes = useStyles();
+  const [drawerOpen, setState] = React.useState(false);
+
+  const toggleDrawer = () => {
+    setState(!drawerOpen);
+  };
+
+  return (
+    <React.Fragment>
+      <AppBar
+        position="static"
+        color="transparent"
+        elevation={0}
+        classes={{ root: classes.navbar }}
+      >
+        <Container maxWidth="md">
+          <Toolbar>
+            <Hidden mdUp>
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="menu"
+                onClick={toggleDrawer}
+              >
+                <MenuIcon />
+              </IconButton>
+            </Hidden>
+            <Hidden smDown>
+              <Typography variant="h6" className={classes.title}>
+                <Box display="flex">
+                  {navLinks.map(({ text, href }) => (
+                    <Box key={href} mx={4}>
+                      <Link href={href} color="textPrimary">
+                        {text}
+                      </Link>
+                    </Box>
+                  ))}
+                </Box>
+              </Typography>
+            </Hidden>
+          </Toolbar>
+        </Container>
+      </AppBar>
+      <Hidden mdUp>
+        <Drawer
+          anchor="left"
+          open={drawerOpen}
+          onClose={toggleDrawer}
+          color="primary"
+          classes={{ paper: classes.drawerPaper }}
+        >
+          <Typography color="textPrimary">
+            <List component="nav" className={classes.navList}>
+              {navLinks.map(({ text, href }) => (
+                <ListItem button key={href}>
+                  <ListItemLink href={href}>
+                    <ListItemText
+                      primary={text}
+                      classes={{ primary: classes.navListItemText }}
+                    />
+                  </ListItemLink>
+                </ListItem>
+              ))}
+            </List>
+          </Typography>
+        </Drawer>
+      </Hidden>
+    </React.Fragment>
+  );
+}
