@@ -71,7 +71,7 @@ export default function Index(): ReactElement {
             vernetzen und nach außen mit einer gemeinsamen Stimme sprechen.
             Deshalb haben wir Anfang 2021 mithilfe einer Förderung durch den
             <Link href="https://stja.de/"> Stadtjugendausschuss</Link> das
-            Projekt „queerKAstle“ gestartet. "queerKAstle" ist dabei erstmal nur
+            Projekt „queerKAstle“ gestartet. &quot;queerKAstle&quot; ist dabei erstmal nur
             der Arbeitstitel. Wenn sich herausstellt, dass der Name gut ankommt,
             dann werden aber auch das Zentrum so taufen.
           </Typography>

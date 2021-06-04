@@ -3,10 +3,7 @@ import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import useMediaQuery from "@material-ui/core/useMediaQuery";
-import { useTheme } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
 import Link from "@/components/Link"
 import { makeStyles } from "@material-ui/core/styles";
 
