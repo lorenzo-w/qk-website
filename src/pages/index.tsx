@@ -47,8 +47,10 @@ export default function Index(): ReactElement {
             variant="body1"
             style={{ fontSize: mdUp ? "1.2rem" : "1rem" }}
           >
-            Mach jetzt mit bei unserer Umfrage und teile deine Meinung zu einem
-            queeren Zentrum in Karlsruhe!
+            Wir möchten gerne ein erstes Stimmungsbild aus der Community
+            erhalten und haben dazu eine Umfrage erstellt. Mach jetzt mit beim
+            Entstehungsprozess des queeren Zentrums und nimm an unserer Umfrage
+            teil:
             <Box my={4}>
               <Button
                 variant="contained"
@@ -61,19 +63,16 @@ export default function Index(): ReactElement {
                 Jetzt teilnehmen
               </Button>
             </Box>
-            Das queerKAstle Projekt ist ein Zusammenschluss von Freiwilligen aus
-            verschiedenen LSBTIQA*-Organisationen in Karlsruhe mit dem Ziel, ein
-            queeres Zentrum aufzubauen. Ganz allgemein verstehen wir darunter
-            einen gemeinsam gestalteten Versammlungs-,
-            Veranstaltungs- und Rückzugsort für alle queeren Personen, Gruppen
-            und Organisationen in Karlsruhe. Durch ein solches Zentrum könnte
-            die queere Community in Karlsruhe sich deutlich besser intern
-            vernetzen und nach außen mit einer gemeinsamen Stimme sprechen.
-            Deshalb haben wir Anfang 2021 mithilfe einer Förderung durch den
-            <Link href="https://stja.de/"> Stadtjugendausschuss</Link> das
-            Projekt „queerKAstle“ gestartet. &quot;queerKAstle&quot; ist dabei erstmal nur
-            der Arbeitstitel. Wenn sich herausstellt, dass der Name gut ankommt,
-            dann werden aber auch das Zentrum so taufen.
+            Wir, eine Gruppe von Mitgliedern der LSBTIQA*-Community aus
+            Karlsruhe und Umgebung, finden es ist an der Zeit, dass auch
+            Karlsruhe sein eigenes queeres Zentrum bekommt. <br />
+            Ganz allgemein verstehen wir darunter einen gemeinsam gestalteten
+            Versammlungs-, Veranstaltungs- und Rückzugsort für alle queeren
+            Personen, Gruppen und Organisationen in Karlsruhe. <br />
+            Durch ein solches Zentrum könnte sich die queere Community in
+            Karlsruhe deutlich besser intern vernetzen und nach außen mit einer
+            gemeinsamen Stimme sprechen. Deshalb haben wir Anfang 2021 das
+            Projekt „queerKAstle“ ins Leben gerufen.
           </Typography>
         </Box>
       </Container>
