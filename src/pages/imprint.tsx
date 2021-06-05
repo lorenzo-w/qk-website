@@ -4,7 +4,6 @@ import Box from "@material-ui/core/Box";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Typography } from "@material-ui/core";
-import Link from "@/components/Link"
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -27,7 +26,7 @@ export default function Index(): ReactElement {
         Heinrich-Wittmann-Straße 19<br/>
         76131 Karlsruhe
         <Typography variant="h5" className={classes.heading}>Kontakt</Typography> 
-        <Link href="mailto:info@queerkastle.de">info@queerkastle.de</Link>
+        info[at]queerkastle.de
         <Typography variant="h5" className={classes.heading}>Förderung</Typography> 
         <img src="/BMFSFJ_DL_mitFoerderzusatz.jpg" height="100"></img>
         <img src="/stja_logo_11_dunkelblau.jpg" height="100"></img>

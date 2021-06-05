@@ -4,7 +4,6 @@ import Box from "@material-ui/core/Box";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Typography } from "@material-ui/core";
-import Link from "@/components/Link"
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -22,7 +21,7 @@ export default function Index(): ReactElement {
       <Header />
       <Container maxWidth="md">
         <Typography variant="h3" className={classes.heading}>Kontakt</Typography> 
-        Bei allen Fragen könnt ihr euch gerne an die folgende E-Mail-Adresse wenden: <Link href="mailto:info@queerkastle.de">info@queerkastle.de</Link>
+        Bei allen Fragen könnt ihr euch gerne an die folgende E-Mail-Adresse wenden: info[at]queerkastle.de
       </Container>
       <Box flexGrow={1}></Box>
       <Footer />
