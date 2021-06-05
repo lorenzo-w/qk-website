@@ -28,6 +28,9 @@ export default function Index(): ReactElement {
         76131 Karlsruhe
         <Typography variant="h5" className={classes.heading}>Kontakt</Typography> 
         <Link href="mailto:info@queerkastle.de">info@queerkastle.de</Link>
+        <Typography variant="h5" className={classes.heading}>Förderung</Typography> 
+        <img src="/BMFSFJ_DL_mitFoerderzusatz.jpg" height="100"></img>
+        <img src="/stja_logo_11_dunkelblau.jpg" height="100"></img>
       </Container>
       <Box flexGrow={1}></Box>
       <Footer />
