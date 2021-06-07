@@ -10,6 +10,7 @@ import { useTheme } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
+import Foerderung from "@/components/Foerderung"
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -39,7 +40,7 @@ export default function Index(): ReactElement {
       <Container maxWidth="md">
         <HomeImageLower width="100%" height="auto" />
         <Box my={6} mx={2} style={{ textAlign: "center" }}>
-          <Typography variant={mdUp ? "h4" : "h6"} className={classes.heading}>
+          <Typography variant={mdUp ? "h4" : "h5"} className={classes.heading}>
             Ein Zentrum für die LSBTIQA*-Community in Karlsruhe
           </Typography>
           <Typography
@@ -73,6 +74,10 @@ export default function Index(): ReactElement {
             gemeinsamen Stimme sprechen. Deshalb haben wir Anfang 2021 das
             Projekt „queerKAstle“ ins Leben gerufen.
           </Typography>
+          <Typography variant={mdUp ? "h5" : "h6"} className={classes.heading}>
+            Gefördert durch
+          </Typography>
+          <Foerderung/>
         </Box>
       </Container>
       <Footer />

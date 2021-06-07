@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import Foerderung from "@/components/Foerderung"
 
 const useStyles = makeStyles((theme) => ({
   heading: {
@@ -28,8 +29,7 @@ export default function Index(): ReactElement {
         <Typography variant="h5" className={classes.heading}>Kontakt</Typography> 
         info[at]queerkastle.de
         <Typography variant="h5" className={classes.heading}>Förderung</Typography> 
-        <img src="/BMFSFJ_DL_mitFoerderzusatz.jpg" height="100"></img>
-        <img src="/stja_logo_11_dunkelblau.jpg" height="100"></img>
+        <Foerderung/>
       </Container>
       <Box flexGrow={1}></Box>
       <Footer />
