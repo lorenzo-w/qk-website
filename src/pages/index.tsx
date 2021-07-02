@@ -8,7 +8,6 @@ import HomeImageLower from "@/graphics/home_image_lower.svg";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import { useTheme } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
-import Button from "@material-ui/core/Button";
 import { makeStyles } from "@material-ui/core/styles";
 import Foerderung from "@/components/Foerderung"
 
