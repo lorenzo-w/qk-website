@@ -98,16 +98,6 @@ export default function Header(): ReactElement {
                   ))}
                 </Box>
               </Typography>
-              <Button
-                variant="contained"
-                color="secondary"
-                href="https://tr4pxy20yh0.typeform.com/to/DcPDUmxv"
-                target="_blank"
-                rel="noopener noreferrer"
-                size="large"
-              >
-                Zur Umfrage
-              </Button>
             </Hidden>
           </Toolbar>
         </Container>

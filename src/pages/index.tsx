@@ -47,22 +47,6 @@ export default function Index(): ReactElement {
             variant="body1"
             style={{ fontSize: mdUp ? "1.2rem" : "1rem" }}
           >
-            Wir möchten gerne ein erstes Stimmungsbild aus der Community
-            erhalten und haben dazu eine Umfrage erstellt. Mach jetzt mit beim
-            Entstehungsprozess des queeren Zentrums und nimm an unserer Umfrage
-            teil:
-            <Box my={4}>
-              <Button
-                variant="contained"
-                size={mdUp ? "large" : "medium"}
-                color="secondary"
-                href="https://tr4pxy20yh0.typeform.com/to/DcPDUmxv"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Jetzt teilnehmen
-              </Button>
-            </Box>
             Wir, eine Gruppe von Mitgliedern der LSBTIQA*-Community aus
             Karlsruhe und Umgebung, finden es ist an der Zeit, dass auch
             Karlsruhe sein eigenes queeres Zentrum bekommt. <br />
